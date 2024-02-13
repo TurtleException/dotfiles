@@ -5,5 +5,5 @@ This directory contains my commonly used dotfiles - including aliases, bash conf
 ### Install
 
 ```bash
-git clone https://github.com/TurtleException/dotfiles ~/.dotfiles && ~/-dotfiles/install.sh
+git clone https://github.com/TurtleException/dotfiles ~/.dotfiles && ~/.dotfiles/install.sh
 ```
