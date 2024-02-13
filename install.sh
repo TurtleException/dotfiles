@@ -2,7 +2,7 @@
 
 # Installer script for dotfiles
 
-INSTALL_DIR="~"
+INSTALL_DIR="$HOME"
 
 # Asks a Yes/No question and prompts the user (defaults to yes if not input is supplied)
 function ask() {
