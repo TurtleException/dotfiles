@@ -24,6 +24,9 @@ function askSource() {
 
 cd "$INSTALL_DIR/.dotfiles" || exit 1
 
+echo "" >> "$INSTALL_DIR/.bashrc"
+echo "# dotfiles repo config" >> "$INSTALL_DIR/.bashrc"
+
 askSource "Add bash aliases?" ".bash_aliases"
 askSource "Use color prompt?" ".bash_color"
 
