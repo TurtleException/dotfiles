@@ -30,7 +30,36 @@ echo "# dotfiles repo config" >> "$INSTALL_DIR/.bashrc"
 askSource "Add bash aliases?" ".bash_aliases"
 askSource "Use color prompt?" ".bash_color"
 
-# TODO: is there no better way to do this?
 if ask "Install motd?"; then
-  echo "./.dotfiles/motd.sh" >> "$INSTALL_DIR/.bashrc"
+  install_motd=true
+
+  # Check whether figlet is already installed
+  if ! command -v figlet &>/dev/null; then
+    # Check whether figlet can be installed via apt (Debian & Ubuntu)
+    if command -v apt &>/dev/null; then
+      if ask "  Figlet could not be found. Should it be installed?"; then
+        sudo apt install figlet
+      fi
+    # Check whether figlet can be installed via dnf (Fedora)
+    elif command -v dnf &>/dev/null; then
+      if ask "  Figlet could not be found. Should it be installed?"; then
+        sudo dnf install figlet
+      fi
+    # Check whether figlet can be installed via yum (CentOS & RHEL)
+    elif command -v yum &>/dev/null; then
+      if ask "  Figlet could not be found. Should it be installed?"; then
+        sudo yum install figlet
+      fi
+    else
+      if ! ask "  Figlet could not be found. Proceed anyway?"; then
+        install_motd=false
+      fi
+    fi
+  fi
+
+  if install_motd == "true"; then
+    echo "./.dotfiles/motd.sh" >> "$INSTALL_DIR/.bashrc"
+  else
+    echo "  Skipping installation of motd"
+  fi
 fi
