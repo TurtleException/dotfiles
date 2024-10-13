@@ -4,7 +4,7 @@
 
 INSTALL_DIR="$HOME"
 
-# Asks a Yes/No question and prompts the user (defaults to yes if not input is supplied)
+# Asks a Yes/No question and prompts the user (defaults to yes if no input is supplied)
 function ask() {
   read -p "$1 (Y/n): " response
   test -z "$response" \
@@ -15,7 +15,7 @@ function ask() {
     || [ "$response" = "YES" ]
 }
 
-# Asks whether something should be installed (i.e. sources by .bashrc)
+# Asks whether something should be sourced by .bashrc
 function askSource() {
   if ask "$1"; then
     echo "source $INSTALL_DIR/.dotfiles/$2" >> "$INSTALL_DIR/.bashrc"
@@ -57,7 +57,7 @@ if ask "Install motd?"; then
     fi
   fi
 
-  if install_motd == "true"; then
+  if $install_motd; then
     echo "./.dotfiles/motd.sh" >> "$INSTALL_DIR/.bashrc"
   else
     echo "  Skipping installation of motd"
