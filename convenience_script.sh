@@ -69,7 +69,11 @@ function main() {
 		fi
 	fi
 
-	git clone https://github.com/TurtleException/dotfiles ~/.dotfiles && bash ~/.dotfiles/install.sh
+	echo "Cloning repository..."
+	git clone https://github.com/TurtleException/dotfiles ~/.dotfiles > /dev/null 2>&1
+
+	echo "Executing install script..."
+	bash ~/.dotfiles/install.sh
 }
 
 # Only invoke at the end to prevent partial transmission of this script
