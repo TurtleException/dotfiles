@@ -27,21 +27,39 @@ function main() {
 			else
 				exit 1
 			fi
+		# Attempt to install via DNF
 		elif command -v dnf &>/dev/null; then
 			if ask "  Attempt to install via DNF?"; then
 				sudo dnf install git
+
+				if [ $? -ne 0 ]; then
+					echo "  dnf install failed"
+					exit 3
+				fi
 			else
 				exit 1
 			fi
+		# Attempt to install via YUM
 		elif command -v yum &>/dev/null; then
 			if ask "  Attempt to install via YUM?"; then
 				sudo yum install git
+
+				if [ $? -ne 0 ]; then
+					echo "  yum install failed"
+					exit 3
+				fi
 			else
 				exit 1
 			fi
+		# Attempt to install via brew
 		elif command -v brew &>/dev/null; then
 			if ask "  Attempt to install via Homebrew?"; then
 				brew install git
+
+				if [ $? -ne 0 ]; then
+					echo "  brew install failed"
+					exit 3
+				fi
 			else
 				exit 1
 			fi
