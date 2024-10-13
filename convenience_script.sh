@@ -18,7 +18,12 @@ function main() {
 		# Attempt to install via APT
 		if command -v apt &>/dev/null; then
 			if ask "  Attempt to install via APT?"; then
-				sudo apt install git
+				sudo apt install git -y > /dev/null 2>&1
+
+				if [ $? -ne 0 ]; then
+					echo "  apt install failed"
+					exit 3
+				fi
 			else
 				exit 1
 			fi
