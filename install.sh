@@ -6,7 +6,7 @@ INSTALL_DIR="$HOME"
 
 # Asks a Yes/No question and prompts the user (defaults to yes if no input is supplied)
 function ask() {
-	read -p "$1 (Y/n): " response
+	read -p "$1 (Y/n): " response < /dev/tty
 	test -z "$response" \
 		|| [ "$response" = "y" ] \
 		|| [ "$response" = "Y" ] \
