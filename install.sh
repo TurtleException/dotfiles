@@ -88,3 +88,10 @@ if ask "Install motd?"; then
 		echo "  Skipping installation of motd"
 	fi
 fi
+
+if command -v nano &> /dev/null; then
+	ask "Install nanorc files?"; then
+		mkdir -p "$INSTALL_DIR"/.config/nano/nanorc/
+		cp "$INSTALL_DIR/.dotfiles/nanorc/*" "$INSTALL_DIR/.config/nano/nanorc/"
+	fi
+fi
