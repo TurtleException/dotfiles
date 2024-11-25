@@ -91,7 +91,7 @@ fi
 
 if command -v nano &> /dev/null; then
 	if ask "Install nanorc files?"; then
-		mkdir -p "$INSTALL_DIR"/.config/nano/nanorc/
-		cp "$INSTALL_DIR"/.dotfiles/nanorc/* "$INSTALL_DIR"/.config/nano/nanorc/
+		mkdir -p "$INSTALL_DIR"/.config/nano/
+		cp "$INSTALL_DIR/.dotfiles/nanorc" "$INSTALL_DIR/.config/nano/nanorc"
 	fi
 fi

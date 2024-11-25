@@ -1,0 +1,6 @@
+set locking
+
+set tabsize 8
+
+## === Syntax coloring ===
+include "~/.dotfiles/nano/*.nanorc"
