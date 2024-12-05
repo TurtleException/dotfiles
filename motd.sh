@@ -5,9 +5,19 @@
 
 dotfiles_dir=$(dirname "$0")
 
-hostname=$(hostnamectl hostname --pretty)
-if [ "$hostname" == "" ]; then
-	hostname=$(hostnamectl hostname)
+hostname=""
+
+hctl_version=$(hostnamectl --version | grep -o -P '(?<=systemd )\d+')
+if [ "$hctl_version" -ge 249 ]; then
+	hostname=$(hostnamectl hostname --pretty)
+
+	if [ "$hostname" == "" ]; then
+		hostname=$(hostnamectl hostname)
+	fi
+fi
+
+if [ -z "$hostname" ]; then
+	hostname=$(hostname)
 fi
 
 paste <(cat "$dotfiles_dir"/res/turtle) <(figlet "$hostname")
