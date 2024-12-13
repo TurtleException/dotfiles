@@ -4,17 +4,17 @@ escape_char /
 % Locale for English locale in Germany
 
 LC_IDENTIFICATION
-title      "Custom english locale for Germany"
-source     "TurtleException"
-address    "https:////github.com//TurtleException//"
-contact    ""
-email      "dev@turtle-mail.de"
-tel        ""
-fax        ""
-language   "English"
-territory  "Germany"
-revision   "1.0"
-date       "2024-11-25"
+title		"Custom english locale for Germany"
+source		"TurtleException"
+address		"https:////github.com//TurtleException//"
+contact		""
+email		"dev@turtle-mail.de"
+tel		""
+fax		""
+language	"English"
+territory	"Germany"
+revision	"1.0"
+date		"2024-11-25"
 
 category "i18n:2012";LC_IDENTIFICATION
 category "i18n:2012";LC_CTYPE
@@ -74,29 +74,29 @@ copy "iso14651_t1"
 END LC_COLLATE
 
 LC_MONETARY
-int_curr_symbol     "EUR "
-currency_symbol     "€"
-mon_decimal_point   "."
-mon_thousands_sep   ","
-mon_grouping        3;3
-positive_sign       ""
-negative_sign       "-"
-int_frac_digits     2
-frac_digits         2
-p_cs_precedes       1
-int_p_sep_by_space  1
-p_sep_by_space      0
-n_cs_precedes       1
-int_n_sep_by_space  1
-n_sep_by_space      0
-p_sign_posn         1
-n_sign_posn         1
+int_curr_symbol		"EUR "
+currency_symbol		"€"
+mon_decimal_point	"."
+mon_thousands_sep	","
+mon_grouping		3;3
+positive_sign		""
+negative_sign		"-"
+int_frac_digits		2
+frac_digits		2
+p_cs_precedes		1
+int_p_sep_by_space	1
+p_sep_by_space		0
+n_cs_precedes		1
+int_n_sep_by_space	1
+n_sep_by_space		0
+p_sign_posn		1
+n_sign_posn		1
 END LC_MONETARY
 
 LC_NUMERIC
-decimal_point   "."
-thousands_sep   ","
-grouping        3;3
+decimal_point	"."
+thousands_sep	","
+grouping	3;3
 END LC_NUMERIC
 
 LC_TIME
@@ -128,57 +128,57 @@ mon	"January";/
 	"October";/
 	"November";/
 	"December"
-d_t_fmt    "%a %d %b %Y %T %Z"
-date_fmt   "%Y-%m-%d %H:%M:%S %Z %Y"
-d_fmt      "%Y-%m-%d"
-t_fmt      "%r"
-am_pm	   "";""
-t_fmt_ampm ""
+d_t_fmt		"%a %d %b %Y %T %Z"
+date_fmt	"%Y-%m-%d %H:%M:%S %Z %Y"
+d_fmt		"%Y-%m-%d"
+t_fmt		"%r"
+am_pm		"";""
+t_fmt_ampm	""
 END LC_TIME
 
 LC_MESSAGES
-yesexpr "^[+1yY]"
-noexpr  "^[-0nN]"
-yesstr  "yes"
-nostr   "no"
+yesexpr	"^[+1yY]"
+noexpr	"^[-0nN]"
+yesstr	"yes"
+nostr	"no"
 END LC_MESSAGES
 
 LC_PAPER
-copy "i18n"
+copy	"i18n"
 END LC_PAPER
 
 LC_NAME
-name_fmt    "%d%t%g%t%m%t%f"
-name_miss   "Miss."
-name_mr     "Mr."
-name_mrs    "Mrs."
-name_ms     "Ms."
-name_gen    ""
+name_fmt	"%d%t%g%t%m%t%f"
+name_miss	"Miss."
+name_mr		"Mr."
+name_mrs	"Mrs."
+name_ms		"Ms."
+name_gen	""
 END LC_NAME
 
 
 LC_ADDRESS
-postal_fmt    "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
-country_name  "Germany"
-country_post  "D"
-country_ab2   "DE"
-country_ab3   "DEU"
-country_num   276
-country_car   "D"
-country_isbn  3
-lang_name     "English"
-lang_ab       "en"
-lang_term     "eng"
-lang_lib      "eng"
+postal_fmt	"%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
+country_name	"Germany"
+country_post	"D"
+country_ab2	"DE"
+country_ab3	"DEU"
+country_num	276
+country_car	"D"
+country_isbn	3
+lang_name	"English"
+lang_ab		"en"
+lang_term	"eng"
+lang_lib	"eng"
 END LC_ADDRESS
 
 LC_TELEPHONE
-tel_int_fmt    "+%c %a %l"
-tel_dom_fmt    "%A %l"
-int_select     "00"
-int_prefix     "49"
+tel_int_fmt	"+%c %a %l"
+tel_dom_fmt	"%A %l"
+int_select	"00"
+int_prefix	"49"
 END LC_TELEPHONE
 
 LC_MEASUREMENT
-copy "i18n"
+copy	"i18n"
 END LC_MEASUREMENT
