@@ -16,7 +16,7 @@ echo "  Downloading"
 curl -fsSL "$DEB_URL" -o "$tmpfile" &> /dev/null
 
 echo "  Installing"
-apt install "$tmpfile" -y &> /dev/null
+sudo apt install "$tmpfile" -y &> /dev/null
 
 echo "  Cleaning up"
 rm "$tmpfile"
