@@ -153,6 +153,7 @@ name_miss   "Miss."
 name_mr     "Mr."
 name_mrs    "Mrs."
 name_ms     "Ms."
+name_gen    ""
 END LC_NAME
 
 
