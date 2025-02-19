@@ -6,3 +6,5 @@ alias l='ls -F'
 
 alias glog='git log --oneline --graph'
 alias gloga='git log --oneline --graph --all'
+
+alias tex='tmux && exit'
